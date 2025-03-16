@@ -180,3 +180,12 @@ function mergeSortedArrays(arr1, arr2) {
     return arr
 }
 console.log(mergeSortedArrays([1, 3, 5], [2, 4, 6])); // Expected output: [1, 2, 3, 4, 5, 6]
+
+
+function customMap(arr, callback) {
+    let result = [];
+    for (let i=0;i<arr.length;i++) {
+        result.push(callback(arr[i], i, arr));
+    }
+    return result;
+}
