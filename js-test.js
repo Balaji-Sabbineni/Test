@@ -189,3 +189,17 @@ function customMap(arr, callback) {
     }
     return result;
 }
+
+function stringPermutations(str) {
+    if (str.length <= 1) return [str];
+    let permutations = [];
+    for (let i=0;i<str.length;i++) {
+        let char = str[i];
+        let remainingChars = str.slice(0, i) + str.slice(i + 1);
+        for (let perm of stringPermutations(remainingChars)) {
+            permutations.push(char + perm);
+        }
+    }
+    return permutations;
+}
+console.log(stringPermutations("abc")); // Expected output: ["abc", "acb", "bac", "bca", "cab", "cba"]
