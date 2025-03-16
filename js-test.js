@@ -217,3 +217,14 @@ function firstNonRepeatingChar(str) {
     return null;
 }
 console.log(firstNonRepeatingChar("aabbcce")); // Expected output: "e"
+
+
+console.log(1 + "2" + "2");      // 122
+console.log(1 + +"2" + "2");     // 32
+console.log(1 + -"1" + "2");    //02
+console.log(+"1" + "1" + "2");  // 112
+console.log("A" - "B" + "2");  // nan2
+console.log("A" - "B" + 2);    //nan
+
+console.log(0.1 + 0.2 === 0.3);  //false
+
