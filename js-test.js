@@ -77,3 +77,16 @@ function secondLargest(arr) {
     return arr.at(-2)
 }
 console.log(secondLargest([10, 20, 4, 45, 99])); // Expected output: 45
+
+
+function findMissingNumber(arr) {
+    arr.sort();
+    let min = arr[0]
+    let max = arr.at(-1);
+    for(let i= min;i<max;i++){
+        if(!arr.includes(i)){
+            return i;
+        }
+    }
+}
+console.log(findMissingNumber([1, 2, 4, 5])); // Expected output: 3
