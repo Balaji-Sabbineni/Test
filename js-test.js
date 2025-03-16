@@ -28,3 +28,12 @@ function removeDuplicates(arr) {
     return new Set(arr)
 }
 console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5])); // Expected output: [1, 2, 3, 4, 5]
+
+function factorial(n) {
+    let fact=1;
+    for(let i=1;i<=n;i++){
+        fact *= i
+    }
+    return fact
+}
+console.log(factorial(5)); // Expected output: 120
