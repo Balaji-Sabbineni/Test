@@ -90,3 +90,13 @@ function findMissingNumber(arr) {
     }
 }
 console.log(findMissingNumber([1, 2, 4, 5])); // Expected output: 3
+
+
+function countOccurrences(str) {
+    let freq = {}
+    for( const char of str){
+        freq[char] = (freq[char] || 0) +1;
+    }
+    return freq;
+}
+console.log(countOccurrences("hello")); // Expected output: { h: 1, e: 1, l: 2, o: 1 }
