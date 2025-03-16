@@ -53,3 +53,20 @@ function fibonacci(n) {
     return arr
 }
 console.log(fibonacci(5)); // Expected output: [0, 1, 1, 2, 3]
+
+
+function areAnagrams(str1, str2) {
+    str1 = str1.split("")
+    str2 = str2.split("")
+    str1.sort();
+    str2.sort();
+
+    if(str1.length != str2.length) return false;
+    for(let i=0;i<str1.length;i++) {
+        if(str1[i] != str2[i]){
+            return false
+        }
+    }
+    return true
+}
+console.log(areAnagrams("listen", "silent")); // Expected output: true
