@@ -37,3 +37,19 @@ function factorial(n) {
     return fact
 }
 console.log(factorial(5)); // Expected output: 120
+
+
+function fibonacci(n) {
+    let a =0,b=1;
+    let arr = []
+    arr.push(a)
+    arr.push(b)
+    for(let i=2;i<n;i++){
+        let c = a+b
+        arr.push(c)
+        a = b
+        b = c
+    }
+    return arr
+}
+console.log(fibonacci(5)); // Expected output: [0, 1, 1, 2, 3]
