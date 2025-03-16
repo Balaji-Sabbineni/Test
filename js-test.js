@@ -166,3 +166,11 @@ function arrayIntersection(arr1, arr2) {
     return inter;
 }
 console.log(arrayIntersection([1, 2, 3], [2, 3, 4])); // Expected output: [2, 3]
+
+function groupByKey(arr, key) {
+    return arr.reduce((acc, obj) => {
+        (acc[obj[key]] = acc[obj[key]] || []).push(obj);
+        return acc;
+    }, {});
+}
+
