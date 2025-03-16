@@ -174,3 +174,9 @@ function groupByKey(arr, key) {
     }, {});
 }
 
+function mergeSortedArrays(arr1, arr2) {
+    let arr = arr1.concat(arr2)
+    arr.sort()
+    return arr
+}
+console.log(mergeSortedArrays([1, 3, 5], [2, 4, 6])); // Expected output: [1, 2, 3, 4, 5, 6]
