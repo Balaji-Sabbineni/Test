@@ -203,3 +203,17 @@ function stringPermutations(str) {
     return permutations;
 }
 console.log(stringPermutations("abc")); // Expected output: ["abc", "acb", "bac", "bca", "cab", "cba"]
+
+function firstNonRepeatingChar(str) {
+    let count = {};
+    for (let char of str) {
+        count[char] = (count[char] || 0) + 1;
+    }
+    for (let char of str) {
+        if (count[char] === 1) {
+            return char;
+        }
+    }
+    return null;
+}
+console.log(firstNonRepeatingChar("aabbcce")); // Expected output: "e"
