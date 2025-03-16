@@ -124,3 +124,24 @@ function debounce(func, delay) {
 
 const debfunc = debounce(fun, 1000);
 debfunc()
+
+function throttle(func, delay) {
+    let timeoutId;
+    let lastExecTime = 0;
+  
+    return function executedFunction(...args) {
+      const currentTime = Date.now();
+      const elapsedTime = currentTime - lastExecTime;
+  
+      if (!timeoutId) {
+        timeoutId = setTimeout(() => {
+          func.apply(this, args);
+          lastExecTime = Date.now();
+          timeoutId = null;
+        }, delay - elapsedTime);
+      }
+    };
+  }
+
+
+  
