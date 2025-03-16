@@ -255,3 +255,14 @@ function sum(a) {
 }
 
 console.log(sum(2)(3)(4)); // Expected output: 9
+
+
+function fc(){
+    return "a time out function"
+}
+function delayExecution(func, delay) {
+    setTimeout(() => {
+        console.log(func());
+    }, delay);
+}
+delayExecution(fc, 2000);
