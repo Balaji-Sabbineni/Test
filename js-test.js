@@ -269,3 +269,8 @@ delayExecution(fc, 2000);
 
 
 console.log(typeof NaN);  //number
+
+
+function isEmpty(obj) {
+    return Object.keys(obj).length === 0;
+}
