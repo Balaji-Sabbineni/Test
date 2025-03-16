@@ -144,4 +144,15 @@ function throttle(func, delay) {
   }
 
 
-  
+function longestWord(str) {
+    let arr = str.split(" ")
+    let maxLen = 0,i =-1;
+    for(let s=0;s<arr.length;s++){
+        if(arr[s].length >= maxLen){
+         maxLen = arr[s].length
+         i = s;
+        }    
+    }
+    return arr[i]
+}
+console.log(longestWord("The quick brown fox jumps over the lazy dog")); // Expected output: "jumps"
