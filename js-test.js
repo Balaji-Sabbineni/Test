@@ -106,3 +106,21 @@ function flattenArray(arr) {
     return arr.flat(2);
 }
 console.log(flattenArray([1, [2, [3, 4], 5], 6])); // Expected output: [1, 2, 3, 4, 5, 6]
+
+
+function fun() {
+    console.log('This is a function')
+}
+function debounce(func, delay) {
+    let timeout=null
+    return () => {
+        if(timeout) clearTimeout(timeout)
+
+        timeout=setTimeout(() => {
+            func()
+        }, delay)
+    }
+}
+
+const debfunc = debounce(fun, 1000);
+debfunc()
