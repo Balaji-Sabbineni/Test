@@ -23,3 +23,8 @@ function findMax(arr) {
     return arr.pop();
 }
 console.log(findMax([3, 1, 4, 1, 5, 9])); // Expected output: 9
+
+function removeDuplicates(arr) {
+    return new Set(arr)
+}
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5])); // Expected output: [1, 2, 3, 4, 5]
