@@ -236,3 +236,11 @@ a[b] = 123;
 a[c] = 456;
 
 console.log(a[b]);  // 456
+
+function foo() {
+    return
+    {
+        name: "John"
+    };
+}
+console.log(foo()) // undefined
