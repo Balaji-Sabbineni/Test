@@ -156,3 +156,13 @@ function longestWord(str) {
     return arr[i]
 }
 console.log(longestWord("The quick brown fox jumps over the lazy dog")); // Expected output: "jumps"
+
+
+function arrayIntersection(arr1, arr2) {
+    let inter = []
+    for(let i=0;i<arr1.length;i++){
+        if(arr2.includes(arr1[i])) inter.push(arr1[i])
+    }
+    return inter;
+}
+console.log(arrayIntersection([1, 2, 3], [2, 3, 4])); // Expected output: [2, 3]
