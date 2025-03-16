@@ -274,3 +274,12 @@ console.log(typeof NaN);  //number
 function isEmpty(obj) {
     return Object.keys(obj).length === 0;
 }
+
+function test() {
+    console.log(a);
+    var a = 5;
+    console.log(a);
+}
+test(); 
+// undefined
+// 5
