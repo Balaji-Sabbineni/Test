@@ -266,3 +266,6 @@ function delayExecution(func, delay) {
     }, delay);
 }
 delayExecution(fc, 2000);
+
+
+console.log(typeof NaN);  //number
