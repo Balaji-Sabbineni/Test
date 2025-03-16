@@ -100,3 +100,9 @@ function countOccurrences(str) {
     return freq;
 }
 console.log(countOccurrences("hello")); // Expected output: { h: 1, e: 1, l: 2, o: 1 }
+
+
+function flattenArray(arr) {
+    return arr.flat(2);
+}
+console.log(flattenArray([1, [2, [3, 4], 5], 6])); // Expected output: [1, 2, 3, 4, 5, 6]
