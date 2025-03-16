@@ -16,3 +16,10 @@ function isPalindrome(str) {
 }
 console.log(isPalindrome("racecar")); // Expected output: true
 console.log(isPalindrome("hello")); // Expected output: false
+
+
+function findMax(arr) {
+    arr.sort()
+    return arr.pop();
+}
+console.log(findMax([3, 1, 4, 1, 5, 9])); // Expected output: 9
